@@ -1,0 +1,48 @@
+.Weather {
+  padding: 20px;
+  border: 1px solid #dadde1;
+  border-radius: 5px;
+}
+
+.Weather .btn-primary {
+  margin-left: 5px;
+  position: relative;
+}
+
+.Weather .btn-success {
+  margin-left: 50px;
+  display: inline-block;
+}
+
+.Weather .units {
+  font-size: 20px;
+}
+
+.Weather .active {
+  color: black;
+  cursor: default;
+}
+
+.Weather .active:hover {
+  text-decoration: none;
+  color: black;
+}
+
+.Weather .card-img-top {
+  width: 105px;
+  margin-left: 50px;
+  margin-top: -20px;
+}
+
+.card-text {
+  margin-top: -30px;
+}
+
+.Weather .weather-icon-future img {
+  width: 40px;
+  margin-left: 2px;
+}
+
+.Weather .temp-high-low-future {
+  margin-left: -4px;
+}
