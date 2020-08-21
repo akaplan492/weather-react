@@ -49,7 +49,6 @@ export default function Weather(props) {
           <div className="col-6">
             <h1>{weatherData.city}</h1>
             <h2>{weatherData.date}</h2>
-            <br />
             <h3>
               <div className="row">
                 <div> {weatherData.temperature} </div>
