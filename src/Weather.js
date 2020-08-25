@@ -30,7 +30,7 @@ export default function Weather(props) {
           <div className="form-group mx-xl-3 mb-2">
             <label className="sr-only">search city</label>
             <input
-              type="city"
+              type="search"
               className="form-control"
               placeholder="Search City"
             />
