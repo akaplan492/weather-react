@@ -6,11 +6,11 @@
 
 .Weather .form-inline {
   margin-bottom: 10px;
+  position: static;
 }
 
 .Weather .btn-primary {
   margin-left: 5px;
-  position: relative;
 }
 
 .Weather .btn-success {
@@ -35,7 +35,7 @@
 .Weather .card-img-top {
   width: 105px;
   margin-left: 40px;
-  margin-top: -27px;
+  margin-top: -28px;
 }
 
 .card-text {
