@@ -4,6 +4,10 @@
   border-radius: 5px;
 }
 
+.Weather .form-inline {
+  margin-bottom: 10px;
+}
+
 .Weather .btn-primary {
   margin-left: 5px;
   position: relative;
@@ -30,8 +34,8 @@
 
 .Weather .card-img-top {
   width: 105px;
-  margin-left: 50px;
-  margin-top: -20px;
+  margin-left: 40px;
+  margin-top: -26px;
 }
 
 .card-text {
