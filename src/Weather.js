@@ -26,25 +26,24 @@ export default function Weather(props) {
   return (
     <div className="Weather">
       <div className="card-body">
-        <form className="form-inline">
-          <div className="form-group mx-xl-3 mb-2">
-            <label className="sr-only">search city</label>
-            <input
-              type="search"
-              className="form-control"
-              placeholder="Search City"
-            />
-          </div>
-          <button type="submit" className="btn btn-primary mb-2">
-            <i className="fas fa-search"></i>
-          </button>
-          <div>
-            <button type="button" className="btn btn-success mb-2">
-              Use Current Location
-            </button>
+        <form>
+          <div className="row">
+            <div className="col-8">
+              <input
+                type="search"
+                placeholder="Enter a city..."
+                className="form-control"
+                autoFocus="on"
+              />
+            </div>
+            <div className="col-2">
+              <input type="submit" value="Search" className="btn btn-primary" />
+            </div>
+            <div className="col-2">
+              <input type="submit" value="📍" className="btn btn-success" />
+            </div>
           </div>
         </form>
-        <br />
         <div className="row">
           <div className="col-6">
             <h1>{weatherData.city}</h1>
@@ -59,12 +58,12 @@ export default function Weather(props) {
             </h3>
           </div>
           <div className="col-6">
-            <img
-              className="card-img-top"
-              src={weatherData.imgUrl}
-              alt={weatherData.description}
-            />
             <div className="card-text">
+              <img
+                className="card-img-top"
+                src={weatherData.imgUrl}
+                alt={weatherData.description}
+              />
               <ul>
                 <li>{weatherData.description}</li>
                 <li>Humidity: {weatherData.humidity}%</li>

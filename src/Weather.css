@@ -1,21 +1,19 @@
 .Weather {
-  padding: 20px;
   border: 1px solid #dadde1;
   border-radius: 5px;
 }
 
-.Weather .form-inline {
-  margin-bottom: 10px;
-  position: static;
+.Weather form {
+  margin-bottom: 20px;
 }
 
 .Weather .btn-primary {
-  margin-left: 5px;
+  margin-left: -10px;
 }
 
-.Weather .btn-success {
-  margin-left: 50px;
-  display: inline-block;
+.Weather ul {
+  margin: 0;
+  padding: 0;
 }
 
 .Weather .units {
@@ -32,14 +30,14 @@
   color: black;
 }
 
-.Weather .card-img-top {
-  width: 105px;
-  margin-left: 40px;
-  margin-top: -28px;
+.Weather .card-text {
+  margin-left: 50px;
 }
 
-.card-text {
-  margin-left: 10px;
+.Weather .card-img-top {
+  height: 100px;
+  width: 100px;
+  margin-top: -5px;
 }
 
 .Weather .weather-icon-future img {
