@@ -64,7 +64,7 @@ export default function Weather(props) {
               src={weatherData.imgUrl}
               alt={weatherData.description}
             />
-            <div className="card-body">
+            <div className="card-text">
               <ul>
                 <li>{weatherData.description}</li>
                 <li>Humidity: {weatherData.humidity}%</li>
