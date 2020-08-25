@@ -8,6 +8,7 @@ export default function Footer() {
         <a
           href="https://github.com/akaplan492/Kaplan-SheCodesPlus-Project"
           target="_blank"
+          rel="noopener noreferrer"
         >
           Open-source code
         </a>{" "}
