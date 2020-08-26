@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import FormattedDate from "./FormattedDate";
+import WeatherInfo from "./WeatherInfo";
 import axios from "axios";
 import "./Weather.css";
 
@@ -7,7 +7,6 @@ export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
 
   function handleResponse(response) {
-    console.log(response);
     setWeatherData({
       ready: true,
       city: response.data.name,
@@ -41,44 +40,12 @@ export default function Weather(props) {
               </div>
               <div className="col-2">
                 <button type="submit" className="btn btn-success">
-                  <i class="fas fa-location-arrow"></i>
+                  <i className="fas fa-location-arrow"></i>
                 </button>
               </div>
             </div>
           </form>
-          <div className="row">
-            <div className="col-6">
-              <h1>{weatherData.city}</h1>
-              <h2>
-                <FormattedDate date={weatherData.date} />
-              </h2>
-              <h3>
-                <div className="row">
-                  <div>{Math.round(weatherData.temperature)} </div>
-                  <div className="units">
-                    <a href="/"> ºC </a>|<a href="/"> ºF</a>
-                  </div>
-                </div>
-              </h3>
-            </div>
-            <div className="col-6">
-              <div className="card-text">
-                <img
-                  className="card-img-top"
-                  src={weatherData.imgUrl}
-                  alt={weatherData.description}
-                />
-                <ul>
-                  <li className="text-capitalize">{weatherData.description}</li>
-                  <li>Humidity: {weatherData.humidity}%</li>
-                  <li>
-                    Wind: {Math.round(weatherData.wind)} m/s
-                    <i className="fas fa-wind"></i>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+          <WeatherInfo data={weatherData} />
         </div>
       </div>
     );
