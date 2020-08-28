@@ -18,6 +18,8 @@
 
 .Weather .units {
   font-size: 20px;
+  position: relative;
+  top: -14px;
 }
 
 .Weather .active {
