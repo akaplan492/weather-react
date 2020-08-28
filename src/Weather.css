@@ -31,10 +31,11 @@
 }
 
 .Weather .card-text {
+  margin-top: 20px;
   margin-left: 50px;
 }
 
-.Weather .card-img-top {
+.Weather .canvas {
   height: 100px;
   width: 100px;
 }
