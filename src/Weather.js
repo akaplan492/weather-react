@@ -33,7 +33,7 @@ export default function Weather(props) {
   }
 
   function search() {
-    const apiKey = "a083ecce5acb267afcb5fd06c5491ba5";
+    const apiKey = "a2b3486f4f89d2b1b8b885d537cb3883";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
@@ -43,7 +43,7 @@ export default function Weather(props) {
     function showGeolocation(position) {
       let lat = position.coords.latitude;
       let lon = position.coords.longitude;
-      const apiKey = "a083ecce5acb267afcb5fd06c5491ba5";
+      const apiKey = "a2b3486f4f89d2b1b8b885d537cb3883";
       let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
       axios.get(apiUrl).then(handleResponse);
     }
