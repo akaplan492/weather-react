@@ -12,6 +12,8 @@ export default function Weather(props) {
     setWeatherData({
       ready: true,
       city: response.data.name,
+      lat: response.data.coord.lat,
+      lon: response.data.coord.lon,
       date: new Date(response.data.dt * 1000),
       temperature: response.data.main.temp,
       icon: response.data.weather[0].icon,
@@ -36,6 +38,19 @@ export default function Weather(props) {
     axios.get(apiUrl).then(handleResponse);
   }
 
+  function handleCurrentLocation(event) {
+    event.preventDefault();
+    function showGeolocation(position) {
+      let lat = position.coords.latitude;
+      let lon = position.coords.longitude;
+      const apiKey = "7c52c9751339516d5f3a613ae8cd33f4";
+      let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+      axios.get(apiUrl).then(handleResponse);
+    }
+
+    navigator.geolocation.getCurrentPosition(showGeolocation);
+  }
+
   if (weatherData.ready) {
     return (
       <div className="Weather">
@@ -57,7 +72,11 @@ export default function Weather(props) {
                 </button>
               </div>
               <div className="col-2">
-                <button type="submit" className="btn btn-success">
+                <button
+                  type="submit"
+                  className="btn btn-success"
+                  onClick={handleCurrentLocation}
+                >
                   <i className="fas fa-location-arrow"></i>
                 </button>
               </div>
