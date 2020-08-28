@@ -36,17 +36,3 @@
   margin-top: 20px;
   margin-left: 50px;
 }
-
-.Weather .canvas {
-  height: 100px;
-  width: 100px;
-}
-
-.Weather .weather-icon-future img {
-  width: 40px;
-  margin-left: 2px;
-}
-
-.Weather .temp-high-low-future {
-  margin-left: -4px;
-}

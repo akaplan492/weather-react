@@ -1,0 +1,11 @@
+.Forecast {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.Forecast canvas {
+  display: block;
+  margin: 5px auto;
+  width: 40px;
+  height: 40px;
+}
